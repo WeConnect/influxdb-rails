@@ -86,7 +86,8 @@ module InfluxDB
             },
             tags: {
               method: method,
-              server: hostname,
+              host: hostname,
+              dyno: ENV["DYNO"]
             },
           }
 
@@ -96,7 +97,8 @@ module InfluxDB
             },
             tags: {
               method: method,
-              server: hostname,
+              host: hostname,
+              dyno: ENV["DYNO"]
             },
           }
 
@@ -106,7 +108,8 @@ module InfluxDB
             },
             tags: {
               method: method,
-              server: hostname,
+              host: hostname,
+              dyno: ENV["DYNO"]
             },
           }
         rescue => e

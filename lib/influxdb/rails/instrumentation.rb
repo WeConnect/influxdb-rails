@@ -13,7 +13,8 @@ module InfluxDB
             },
             tags: {
               method: "#{controller_name}##{action_name}",
-              server: Socket.gethostname,
+              host: Socket.gethostname,
+              dyno: ENV["DYNO"]
             },
           }
         end

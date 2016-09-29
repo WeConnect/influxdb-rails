@@ -69,7 +69,7 @@ module InfluxDB
           :class => @exception.class.to_s,
           :method => "#{@controller}##{@action}",
           :filename => File.basename(@backtrace.lines.first.try(:file)),
-          :server => Socket.gethostname,
+          :host => Socket.gethostname,
           :status => "open"
         }.merge(@dimensions)
       end
